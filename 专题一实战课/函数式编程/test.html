@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    class Fn {
+      constructor (x) {
+        this.value = x;
+      }
+      // of (x) {
+      //   return new Fn(x);
+      // }
+      map (f) {
+        return Fn.of(f(this.value))
+      }
+    }
+
+    Fn.of = function (x) {
+      return new Fn(x)
+    }
+
+    class Child extends Fn {
+      isNull () {
+        console.log('=====', this.value);
+        return [null, undefined].indexOf(this.value) > -1;
+      }
+      map (f) {
+        return this.isNull() ? Child.of(null) : Child.of(f(this.value));
+      }
+    }
+
+    console.log(new Child(3).map(x => x * 3).map(x => x - 5));
+  </script>
+</body>
+</html>
