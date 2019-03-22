@@ -1,0 +1,29 @@
+{
+  "name": "jcyd",
+  "version": "1.0.0",
+  "description": "京程一灯学习笔记",
+  "main": "karma.conf.js",
+  "scripts": {
+    "test": "",
+    "karma": "karma start"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/srbtj/jcyd.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/srbtj/jcyd/issues"
+  },
+  "homepage": "https://github.com/srbtj/jcyd#readme",
+  "devDependencies": {
+    "jasmine-core": "^3.3.0",
+    "karma": "^4.0.1",
+    "karma-chrome-launcher": "^2.2.0",
+    "karma-coverage": "^1.1.2",
+    "karma-jasmine": "^2.0.1",
+    "karma-phantomjs-launcher": "^1.0.4"
+  }
+}
