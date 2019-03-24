@@ -14,7 +14,7 @@ module.exports = function(config) {
 
 
     // list of files / patterns to load in the browser
-    files: [
+    files: [ // 源文件与测试文件配对
       './src/test/unit/*.js',
       './src/test/unit/*.spec.js'
     ],
@@ -27,6 +27,7 @@ module.exports = function(config) {
 
     // preprocess matching files before serving them to the browser
     // available preprocessors: https://npmjs.org/browse/keyword/karma-preprocessor
+    // 对哪些文件进行覆盖率检查 (预处理器)
     preprocessors: {
       './src/test/unit/**/*.js': ['coverage']
     },
@@ -35,6 +36,7 @@ module.exports = function(config) {
     // test results reporter to use
     // possible values: 'dots', 'progress'
     // available reporters: https://npmjs.org/browse/keyword/karma-reporter
+    // 报告: progress(进度), coverage(覆盖率)
     reporters: ['progress', 'coverage'],
 
 
@@ -63,7 +65,7 @@ module.exports = function(config) {
     // Continuous Integration mode
     // if true, Karma captures browsers, runs the tests and exits
     // singleRun: false,
-    singleRun: true,
+    singleRun: true,  // PhantomJs时，将值知必须设置为 true
 
     // Concurrency level
     // how many browser should be started simultaneous

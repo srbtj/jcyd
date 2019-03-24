@@ -4,8 +4,10 @@
   "description": "京程一灯学习笔记",
   "main": "karma.conf.js",
   "scripts": {
-    "test": "",
-    "karma": "karma start"
+    "test": "mocha ./src/test/mochatest/",
+    "karma": "karma start",
+    "e2e": "node ./src/test/e2e/index.js",
+    "ui": "backstop test"
   },
   "repository": {
     "type": "git",
@@ -19,11 +21,17 @@
   },
   "homepage": "https://github.com/srbtj/jcyd#readme",
   "devDependencies": {
+    "backstopjs": "^3.8.8",
+    "express": "^4.16.4",
     "jasmine-core": "^3.3.0",
     "karma": "^4.0.1",
     "karma-chrome-launcher": "^2.2.0",
     "karma-coverage": "^1.1.2",
     "karma-jasmine": "^2.0.1",
-    "karma-phantomjs-launcher": "^1.0.4"
+    "karma-phantomjs-launcher": "^1.0.4",
+    "mocha": "^6.0.2",
+    "mochawesome": "^3.1.1",
+    "selenium-webdriver": "^4.0.0-alpha.1",
+    "supertest": "^4.0.2"
   }
 }

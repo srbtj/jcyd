@@ -1,3 +1,4 @@
+var a = 20;
 window.add = function (num) {
-  return num + 1;
+  return a + num;
 }
