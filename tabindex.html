@@ -27,5 +27,98 @@
         <option>test333</option>
       </select>
   <!-- <area shape="" coords="" href="" alt=""> -->
+  <script>
+    // var yd = {
+    //   baz: 1,
+    //   bar: function () {
+    //     console.log('-------------', this);
+    //     return this.baz;
+    //   }
+    // };
+
+    // (function() {
+    //   // arguments[0]() -> function () { return this.baz }
+    //   console.log(arguments[0]());
+    //   console.log(typeof arguments[0]());
+    // })(yd.bar);
+
+    // var x = [typeof x, typeof y][1] -> ['undefined', 'undefined'][1] -> 'undefined'
+
+    // console.log((function (x) {
+    //   console.log(x);
+    //   delete x;
+    //   console.log(x);
+    //   return x;
+    // })(1))
+
+    // var x = 1;
+    // if (function f() {}) {
+    //   console.log('-------------', x);
+    //   x += typeof f;
+    //   console.log('++++++++++++++', x)
+    // }
+    // console.log(x);
+
+    // function f () {
+    //   return f;
+    // }
+
+    // console.log(new f() instanceof f);
+    // console.log(new f() instanceof f);
+
+    // var yd = [0];
+    // if (yd) {
+    //   console.log('+++++', yd == true)
+    // } else {
+    //   console.log("yd");
+    // }
+
+    // function yd () {
+    //   return {
+    //     a: 1
+    //   }
+    // };
+
+    // var result = yd();
+    // console.log(result.a);
+
+    // yideng;
+    // console.log(1);
+
+    // var yd = Array(3);
+    // yd[0] = 2;
+    // console.log(yd);
+    // var r = yd.map(function (item) {
+    //   return '1';
+    // });
+
+    // console.log(r);
+    // console.log(yd);
+
+    // while(1) {
+    //   consooe.log(Math.random());
+    // };
+
+      // var a = Function.length;
+      // console.log(Function.length)
+      // var b = new Function().length;
+      // console.log(new Function().length)
+      // console.log(a == b);
+
+      function m (arr) {
+        arr[0] = arr[2];
+      }
+
+      function n (a,b,c=2) {
+        c = 10;
+        m(arguments);
+        return a + b + c;
+      }
+
+      console.log(n(1,1,1));
+  </script>
+  <!-- <script>
+    console.log(2);
+  </script> -->
 </body>
 </html>

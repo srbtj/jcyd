@@ -42,16 +42,20 @@
 
       ./configure \
       --prefix=/usr/local/nginx \
-      --pid-path=/usr/local/nginx/logs/nginx.pid \
+      --pid-path=/var/run/nginx.pid \
       --lock-path=/var/lock/nginx.lock \
-      --error-log-path=/usr/local/nginx/logs/error.log \
-      --http-log-path=/usr/local/log/nginx/access.log \
+      --error-log-path=/var/log/nginx/error.log \
+      --http-log-path=/var/log/nginx/access.log \
       --with-http_gzip_static_module \
       --http-client-body-temp-path=/var/temp/nginx/client \
       --http-proxy-temp-path=/var/temp/nginx/proxy \
       --http-fastcgi-temp-path=/var/temp/nginx/fastcgi \
-      --http-uwsgi-temp-path=/var/temp/nginx-uwsgi \
+      --http-uwsgi-temp-path=/var/temp/nginx/uwsgi \
       --http-scgi-temp-path=/var/temp/nginx/scgi
+
+      or 
+
+      ./configure --prefix=/usr/local/nginx --with-http_stub_status_module --with-pcre  --with-http_ssl_module
 
   *** 回车，等待安装
 
