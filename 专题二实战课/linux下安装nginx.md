@@ -173,3 +173,18 @@ CentOS7.0以上默认firewall为防火墙配置, 此处只改iptables配置
 
   **** 有时不好使的话，重新启动linux服务  shutdown -r now
 
+
+### 防火墙
+
+  1. 查看当前开放的端口
+
+    firewall-cmd --zone=dmz --list-ports
+
+  2. 开放某个端口
+
+    firewall-cmd --zone=dmz --add-port=8080/tcp --permanent
+
+    ## --zone 作用域
+    ## --add-port=8080/tcp 添加端口，格式: 端口/通迅协议
+    ## --permanent 永久生效，没有这个参数重启后失效
+
