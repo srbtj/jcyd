@@ -23,10 +23,13 @@
 
     yum install jenkins
 
+  3. 查看安装路径
+
+    rpm -qc jenkins
 
 ### 启动 Jenkins
 
-    sudo jenkins start
+    sudo service jenkins start
 
   可能会出现的问题:  安装了java运行环境后，仍然倒报如下错误
 
